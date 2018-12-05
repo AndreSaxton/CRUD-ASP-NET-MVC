@@ -12,12 +12,13 @@
         input[type=submit]{
             display: block;
         }
-        
     </style>
 </head>
 <body>
     <header>
         <h1>This is in layout</h1>
+
+        @RenderSection("HeaderStuff", false)
     </header>
     <div>
         @RenderBody()

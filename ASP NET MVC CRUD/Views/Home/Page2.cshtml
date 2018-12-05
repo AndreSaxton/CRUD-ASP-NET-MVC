@@ -3,11 +3,15 @@
     //Layout = null;
 }
 
+@section HeaderStuff
+{
+    <h2>I put this in the header</h2>
+}
+
 <p>Form</p>
 
 @using (Html.BeginForm())
 {
-
     @Html.EditorForModel()
 
     <input type="submit" value="Salvar Form" />

@@ -28,8 +28,10 @@ namespace ASP_NET_MVC_CRUD.Controllers
         [HttpPost]
         public ActionResult Page2(Page2Model vm)
         {
-            ViewBag.Result = String.Format("{0} {1}; Age {2}", vm.FirstName, vm.LastName, vm.Age);
-
+            if (ModelState.IsValid)
+                ViewBag.Result = String.Format("{0} {1}; Age {2}", vm.FirstName, vm.LastName, vm.Age);
+            else
+                ViewBag.Result = "You failed.";
             return View();
         }
     }
