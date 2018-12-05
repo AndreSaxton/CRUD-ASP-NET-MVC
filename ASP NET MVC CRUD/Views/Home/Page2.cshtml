@@ -1,0 +1,23 @@
+﻿@model ASP_NET_MVC_CRUD.Models.Home.Page2Model
+@{
+    //Layout = null;
+}
+
+<p>Form</p>
+
+@using (Html.BeginForm())
+{
+
+    @Html.Label("firstName")
+    @Html.TextBox("firstName")
+
+    @Html.Label("lastName")
+    @Html.TextBox("lastName")
+
+    @Html.Label("age");
+    @Html.TextBox("age")
+
+    <input type="submit" value="Salvar Form" />
+
+    <p>@ViewBag.Result</p>
+}

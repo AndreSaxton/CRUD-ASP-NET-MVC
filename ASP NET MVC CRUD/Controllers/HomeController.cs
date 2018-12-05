@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASP_NET_MVC_CRUD.Models.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,21 +9,26 @@ namespace ASP_NET_MVC_CRUD.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Home
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Page2()
         {
-            ViewBag.Message = "Your application description page.";
+            var vm = new Page2Model();
+            vm.FistName = "Default Name";
+            //vm.LastName = ;
+            //vm.Age = ;
 
-            return View();
+            return View(vm);
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult Page2(string firstName, string lastName, int? age)
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Result = String.Format("{0} {1}; Age {2}", firstName, lastName, age);
 
             return View();
         }
