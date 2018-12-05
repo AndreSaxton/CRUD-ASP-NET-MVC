@@ -7,7 +7,7 @@ namespace ASP_NET_MVC_CRUD.Models.Home
 {
     public class Page2Model
     {
-        public string FistName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
         public int? Age { get; set; }
     }

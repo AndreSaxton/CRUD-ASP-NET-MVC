@@ -8,14 +8,15 @@
 @using (Html.BeginForm())
 {
 
-    @Html.Label("firstName")
-    @Html.TextBox("firstName")
+    @Html.LabelFor(x => x.FirstName)
+    @Html.TextBoxFor(x => x.FirstName)
 
-    @Html.Label("lastName")
-    @Html.TextBox("lastName")
 
-    @Html.Label("age");
-    @Html.TextBox("age")
+    @Html.LabelFor(x => x.LastName)
+    @Html.TextBoxFor(x => x.LastName)
+
+    @Html.LabelFor(x => x.Age)
+    @Html.TextBoxFor(x => x.Age)
 
     <input type="submit" value="Salvar Form" />
 

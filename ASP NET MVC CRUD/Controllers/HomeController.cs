@@ -18,7 +18,7 @@ namespace ASP_NET_MVC_CRUD.Controllers
         public ActionResult Page2()
         {
             var vm = new Page2Model();
-            vm.FistName = "Default Name";
+            vm.FirstName = "Default Name";
             //vm.LastName = ;
             //vm.Age = ;
 
@@ -26,9 +26,9 @@ namespace ASP_NET_MVC_CRUD.Controllers
         }
 
         [HttpPost]
-        public ActionResult Page2(string firstName, string lastName, int? age)
+        public ActionResult Page2(Page2Model vm)
         {
-            ViewBag.Result = String.Format("{0} {1}; Age {2}", firstName, lastName, age);
+            ViewBag.Result = String.Format("{0} {1}; Age {2}", vm.FirstName, vm.LastName, vm.Age);
 
             return View();
         }
